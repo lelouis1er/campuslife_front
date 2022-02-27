@@ -1,0 +1,62 @@
+
+<div class="heading-bx left">
+  <h2 class="title-head">Connectez-vous à votre <span>Compte</span></h2>
+  <p>
+    Vous n'avez pas de compte?
+    <button class="btn-link" (click)="swhoActiveCompte()">
+      Créer en un
+    </button>
+  </p>
+</div>
+
+<form class="contact-bx" [formGroup]="loginForm" (ngSubmit)="onLogin()">
+
+  <div class="row placeani">
+
+    <div class="col-lg-12">
+      <div class="form-group">
+        <div class="input-group">
+          <label></label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Email"
+            formControlName="email"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-12">
+      <div class="form-group">
+        <div class="input-group">
+          <label></label>
+          <input
+            type="password"
+            class="form-control"
+            placeholder="Mot de passe"
+            formControlName="mdp"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-12">
+      <div class="form-group form-forget">
+        <a href="forget-password.html" class="ml-auto">Mot de passe oublié?</a>
+      </div>
+    </div>
+
+    <div class="col-lg-12 m-b30">
+      <button
+        type="submit"
+        class="btn btn-md"
+        [disabled]="loginForm.invalid"
+      >
+        Se connecter
+      </button>
+    </div>
+
+  </div>
+
+</form>

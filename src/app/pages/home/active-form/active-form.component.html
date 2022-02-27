@@ -1,0 +1,70 @@
+
+<div class="heading-bx left">
+  <h2 class="title-head">Activer votre compte <span>Maintenant</span></h2>
+  <p>
+    connectez-vous à votre compte
+    <button class="btn-link" (click)="backToLogin()">
+      Cliquez ici
+    </button>
+  </p>
+</div>
+
+
+
+<form class="contact-bx" [formGroup]="formActive" (ngSubmit)="validForm()">
+
+  <div class="row placeani">
+
+    <div class="col-lg-12">
+      <div class="form-group">
+        <div class="input-group">
+          <label></label>
+          <input
+            type="text"
+            class="form-control"
+            formControlName="codeVerif"
+            placeholder="Code de vérification"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-12">
+      <div class="form-group">
+        <div class="input-group">
+          <label></label>
+          <input
+            type="password"
+            class="form-control"
+            formControlName="mdp"
+            placeholder="Mot de passe"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-12">
+      <div class="form-group">
+        <div class="input-group">
+          <label></label>
+          <input
+            type="password"
+            class="form-control"
+            formControlName="mdpConf"
+            placeholder="Confimation"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-12 m-b30">
+      <button class="btn btn-md" [disabled]="!formActive.valid">
+        Activer mon compte
+      </button>
+    </div>
+
+
+  </div>
+
+
+</form>

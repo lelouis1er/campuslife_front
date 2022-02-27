@@ -1,0 +1,100 @@
+
+
+
+<!-- Header Top ==== -->
+<header class="header rs-nav {{ classEl }}">
+  <div class="top-bar" *ngIf="!isLogedIn()">
+    <div class="container">
+      <div class="row d-flex justify-content-between">
+        <div class="topbar-left">
+          <ul>
+          <!--
+            <li><a href="faq-1.html"><i class="fa fa-question-circle"></i>Ask a Question</a></li>
+            <li><a href="javascript:;"><i class="fa fa-envelope-o"></i>Support@website.com</a></li>
+          -->
+          </ul>
+        </div>
+        <div class="topbar-right">
+          <ul>
+            <li routerLinkActive="active" style="cursor: pointer;" (click)="openLogin()"><a routerLink="home/login" >Se connecter</a></li>
+            <li routerLinkActive="active" style="cursor: pointer;" (click)="openRegister()"><a routerLink="home/register" >S'inscrire</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="sticky-header navbar-expand-lg">
+    <div class="menu-bar clearfix">
+      <div class="container clearfix">
+        <!-- Header Logo ==== -->
+        <div class="menu-logo">
+          <a class="navbar-brand" style="cursor: pointer;" (click)="backToHome()">
+
+              CampusLife
+
+          </a>
+        </div>
+        <!-- Mobile Nav Button ==== -->
+        <button class="navbar-toggler collapsed menuicon justify-content-end" type="button" data-toggle="collapse" data-target="#menuDropdown" aria-controls="menuDropdown" aria-expanded="false" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <div *ngIf="isLogedIn()" class=" secondary-menu menu-links navbar-collapse collapse justify-content-start" id="menuDropdown">
+          <div class="menu-logo">
+            <a class="navbar-brand" routerLink="/">
+              CampusLife
+            </a>
+          </div>
+          <ul class="nav navbar-nav">
+            <li routerLinkActive="active" style="cursor: pointer;" (click)="openBlog()">
+              <a routerLink="/main/mon-programme">
+                <i class="fas fa-blogger"></i>
+                Blog
+              </a>
+            </li>
+            <li routerLinkActive="active" style="cursor: pointer;" (click)="openMonProgramme()">
+              <a routerLink="/main/mon-programme">
+                <i class="fa fa-list"></i>
+                Mon Programme
+              </a>
+            </li>
+            <li>
+              <a href="javascript:;">
+                <i class="fa fa-user-circle" aria-hidden="true"></i>
+                {{ getUserName() }}
+                <i class="fa fa-chevron-down"></i>
+              </a>
+              <ul class="sub-menu">
+                <li>
+                  <a class="" href="#">
+                    <i class="nc-icon nc-badge"></i>
+                    Profile
+                  </a>
+                </li>
+                <li>
+                  <a class="" href="#" (click)="logout()">
+                    <i class="nc-icon nc-button-power"></i>
+                    Déconnexion
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+
+
+        <!-- Search Box ====
+        <div class="nav-search-bar">
+          <form action="#">
+            <input name="search" value="" type="text" class="form-control" placeholder="Type to search">
+            <span><i class="ti-search"></i></span>
+          </form>
+          <span id="search-remove"><i class="ti-close"></i></span>
+        </div>  -->
+      </div>
+    </div>
+    </div>
+  </header>
+  <!-- Header Top END ==== -->

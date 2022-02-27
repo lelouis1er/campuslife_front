@@ -1,0 +1,47 @@
+/*.card-register {
+    background-color: white !important;
+    color: black !important;
+}
+*/
+.bg-blur-white {
+    background-color: white !important;
+    opacity: 0.75;
+    backdrop-filter: blur(10px) !important;
+}
+/*
+.card-register .title {
+    color: dimgray;
+    text-align: center;
+}
+
+.page-header .card-register .title {
+    margin-top: 10px !important;
+    margin-bottom: 30px !important;
+}
+
+.bodered-grey {
+    border: 1px solid dimgray;
+}
+
+.input-group-text {
+    border-radius: .25rem 0rem 0rem .25rem !important;
+}
+
+.register-form .form-control {
+    border: 1px solid lightgray !important;
+    border-left: 0 none !important;
+}
+
+.alert {
+    padding: 30px 15px !important;
+    border: 10px rgba(210, 210, 210, 0.7) !important;
+}
+
+.navbar.navbar-transparent {
+    padding-top: 0px !important;
+}
+
+.nav-link {
+    cursor: pointer;
+}
+*/

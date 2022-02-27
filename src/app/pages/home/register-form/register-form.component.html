@@ -1,0 +1,45 @@
+
+<div class="heading-bx left">
+  <h2 class="title-head">Creer votre compte <span>Maintenant</span></h2>
+  <p>
+    connectez-vous à votre compte
+    <button class="btn-link" (click)="backToLogin()">
+      Cliquez ici
+    </button>
+  </p>
+</div>
+
+
+  <form class="contact-bx" [formGroup]="formRegister" (ngSubmit)="validForm()" >
+
+    <div class="row placeani">
+
+      <div class="col-lg-12">
+        <div class="form-group">
+          <div class="input-group">
+            <label></label>
+            <input type="text" class="form-control" formControlName="matricule" placeholder="Matricule" />
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-12">
+        <div class="form-group">
+          <div class="input-group">
+            <label></label>
+            <input type="text" class="form-control" formControlName="email" placeholder="Email" />
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-12 m-b30">
+        <button class="btn btn-md" [disabled]="!formRegister.valid" >Verifier</button>
+      </div>
+
+    </div>
+
+
+
+</form>
+
+

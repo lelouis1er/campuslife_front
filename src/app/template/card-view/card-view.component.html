@@ -1,0 +1,65 @@
+
+
+      <div class="feature-filters clearfix center m-b40">
+        <ul class="filters" data-toggle="buttons">
+          <li data-filter="" class="btn active">
+            <input type="radio">
+            <a href="#"><span>Toutes</span></a>
+          </li>
+          <li data-filter="programme" class="btn">
+            <input type="radio">
+            <a href="#"><span>Programmées</span></a>
+          </li>
+          <li data-filter="en cours" class="btn">
+            <input type="radio">
+            <a href="#"><span>En cours</span></a>
+          </li>
+          <li data-filter="passee" class="btn">
+            <input type="radio">
+            <a href="#"><span>Passée</span></a>
+          </li>
+        </ul>
+      </div>
+
+
+
+<div class="clearfix">
+  <div class="col-md-12" *ngIf="isEmpty()">
+    <h2>
+      {{ empty_list_msg }}
+    </h2>
+  </div>
+  <ul id="masonry" class="ttr-gallery-listing magnific-image row">
+
+    <li class="action-card col-lg-6 col-md-6 col-sm-12 {{ item.seance.etat }}" *ngFor="let item of cards_infos">
+      <div class="event-bx m-b30">
+        <div class="action-box">
+          <img src="{{ item.img_url }}" alt="">
+        </div>
+        <div class="info-bx d-flex">
+          <div>
+            <div class="event-time">
+              <div class="event-date">{{item.seance.dateSeance | date: 'd' }}</div>
+              <div class="event-month">{{item.seance.dateSeance | date: 'MMMM' }}</div>
+            </div>
+          </div>
+          <div class="event-info">
+            <h4 class="event-title" (click)="gotoSeanceDetails(item)" style="cursor: pointer;">
+              <a>{{item.seance.intitule}} </a>
+              <small>({{ item.seance.etat }})</small>
+            </h4>
+            <ul class="media-post">
+              <li><a href="#"><i class="fa fa-clock-o"></i> {{item.seance.heureDebut}} - {{ item.seance.heureFin }}</a></li>
+              <li><a href="#"><i class="fa fa-map-marker"></i> {{item.seance.idFiliere.nom}} {{item.seance.idNiveau.nom}}</a></li>
+            </ul>
+            <p>
+
+            </p>
+          </div>
+        </div>
+      </div>
+    </li>
+
+  </ul>
+</div>
+

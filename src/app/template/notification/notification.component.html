@@ -1,0 +1,15 @@
+<p *ngFor="let alert of alerts">
+  <alert [type]="alert.type" class="alert-with-icon" [dismissible]="true">
+    <div class="container">
+      <ng-container *ngIf="alert.icon">
+        <span class="tim-icons icon-coins" data-notify="icon"> </span>
+        <i class="nc-icon {{ alert.icon }}"></i>
+      </ng-container>
+
+      <span>
+        {{ alert.message }}
+      </span>
+
+    </div>
+  </alert>
+</p>

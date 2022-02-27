@@ -1,0 +1,18 @@
+<div class="page-header header-filter">
+  <div class="card page-carousel">
+    <ngb-carousel>
+        <ng-template ngbSlide ngb *ngFor="let item of carousel_list" >
+          <div class="carousel-item-bg" style="background-image: url('../../../assets/images/{{ item.image }}');"></div>
+            <div class="carousel-item1">
+              <div class="carousel-caption">
+                <h1>{{ item.text }}</h1>
+                <h2> {{ item.text2 }} </h2>
+                <button class="btn btn-lg btn-round btn-outline-neutral btn-primary" *ngIf="item.hasBtn">
+                  {{item.btnText}}
+                </button>
+              </div>
+            </div>
+        </ng-template>
+    </ngb-carousel>
+  </div>
+</div>
